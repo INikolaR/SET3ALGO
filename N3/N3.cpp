@@ -63,11 +63,6 @@ void quickSort(vector<int>& a, int start, int end) {
     quickSort(a, pivot + 1, end);
 }
 
-/// @brief Realization of hybrid (merge + insertion) sort. Uses merge sort if end - start > limit, else - insertion sort.
-/// @param a array
-/// @param start start index
-/// @param end end index
-/// @param limit the maximum number of elements to do insertion sort
 void hybrid_sort(vector<int>& a, int start, int end, int limit) {
     if (end - start <= limit) {
         heapSort(a, start, end);
